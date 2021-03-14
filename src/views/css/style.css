@@ -1,0 +1,23 @@
+.form-control{
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border: none;
+    height: 7vh;
+    background-color: #191919;
+    box-shadow: 0.1px 1px 1.2px 1px black;
+    color: white;
+}
+.btn{
+    border: none;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    height: 7.3vh;
+    background-color: red;
+    color: white;
+}
+.card{
+    background-color: #333333;
+}
+.fa-sun{
+    color: yellow;
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,200&display=swap" rel="stylesheet">
+    <title>Weather app</title>
+  </head>
+  <body class="">
+    <div>
+        <!-- Image and text -->
+        {{>navbar}}
+    </div>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-sm-4" style="margin-top: 200px;">
+                <small>Welcome to weather app</small>
+                <h3 style="font-family: Roboto Mono,monospace;">Get the latest Weather updates of your city</h3>
+                <button class="btn btn-primary rounded text-white shadow-sm" onclick="func()" >Check Updates</button>
+            </div>
+            <div class="col-sm-8 ml-2" id="imagechange">
+                <img src="undraw_season_change_f99v.png" id="img_fade"  class="img-fluid" height="500px" width="800px" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script>
+        setInterval(()=>{
+            document.getElementById("imagechange").innerHTML=`<img src="undraw_Weather_app_re_kcb1.png" id="img_fade"  class="img-fluid" height="500px" width="800px" class="img-fluid" alt="">`;
+        },5000);
+        setInterval(()=>{
+                document.getElementById('img_fade').style.opacity=1;
+            },9000);
+        setInterval(()=>{
+            document.getElementById("imagechange").innerHTML=`<img src="undraw_weather_notification_4sbo.png" id="img_fade"  class="img-fluid" height="500px" width="800px" class="img-fluid" alt="">`
+        },10000);
+        setInterval(()=>{
+            document.getElementById("imagechange").innerHTML=`<img src="undraw_Weather_re_qsmd.png" id="img_fade"  class="img-fluid" height="500px" width="800px" class="img-fluid" alt="">`
+        },15000);
+
+        const func=()=>{
+          location.href='/weather';
+        }
+
+    </script>
+  </body>
+</html>
